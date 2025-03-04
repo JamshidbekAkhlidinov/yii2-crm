@@ -1,0 +1,786 @@
+[
+    {
+        "category": "app",
+        "value": "E-mail"
+    },
+    {
+        "category": "app",
+        "value": "Status"
+    },
+    {
+        "category": "app",
+        "value": "API access token"
+    },
+    {
+        "category": "app",
+        "value": "Created at"
+    },
+    {
+        "category": "app",
+        "value": "Updated at"
+    },
+    {
+        "category": "app",
+        "value": "Last login"
+    },
+    {
+        "category": "app",
+        "value": "Users"
+    },
+    {
+        "category": "app",
+        "value": "Content"
+    },
+    {
+        "category": "app",
+        "value": "Pages"
+    },
+    {
+        "category": "app",
+        "value": "Categories"
+    },
+    {
+        "category": "app",
+        "value": "Tags"
+    },
+    {
+        "category": "app",
+        "value": "Posts"
+    },
+    {
+        "category": "app",
+        "value": "Landing Elements"
+    },
+    {
+        "category": "app",
+        "value": "Menu"
+    },
+    {
+        "category": "app",
+        "value": "Site Config"
+    },
+    {
+        "category": "app",
+        "value": "Header Title"
+    },
+    {
+        "category": "app",
+        "value": "Product"
+    },
+    {
+        "category": "app",
+        "value": "Services"
+    },
+    {
+        "category": "app",
+        "value": "Partners"
+    },
+    {
+        "category": "app",
+        "value": "Process"
+    },
+    {
+        "category": "app",
+        "value": "Team"
+    },
+    {
+        "category": "app",
+        "value": "Opinions"
+    },
+    {
+        "category": "app",
+        "value": "Project"
+    },
+    {
+        "category": "app",
+        "value": "Statistic"
+    },
+    {
+        "category": "app",
+        "value": "Question"
+    },
+    {
+        "category": "app",
+        "value": "Contact"
+    },
+    {
+        "category": "app",
+        "value": "File manager"
+    },
+    {
+        "category": "app",
+        "value": "Companies"
+    },
+    {
+        "category": "app",
+        "value": "Bot users"
+    },
+    {
+        "category": "app",
+        "value": "I18n Messages"
+    },
+    {
+        "category": "app",
+        "value": "Rbac configuration"
+    },
+    {
+        "category": "app",
+        "value": "Roles"
+    },
+    {
+        "category": "app",
+        "value": "Permissions"
+    },
+    {
+        "category": "app",
+        "value": "Items childs"
+    },
+    {
+        "category": "app",
+        "value": "Home"
+    },
+    {
+        "category": "app",
+        "value": "Email"
+    },
+    {
+        "category": "app",
+        "value": "Password"
+    },
+    {
+        "category": "app",
+        "value": "Not Active"
+    },
+    {
+        "category": "app",
+        "value": "Active"
+    },
+    {
+        "category": "app",
+        "value": "ID"
+    },
+    {
+        "category": "app",
+        "value": "Title"
+    },
+    {
+        "category": "app",
+        "value": "Slug"
+    },
+    {
+        "category": "app",
+        "value": "Sidebar"
+    },
+    {
+        "category": "app",
+        "value": "Created At"
+    },
+    {
+        "category": "app",
+        "value": "Updated At"
+    },
+    {
+        "category": "app",
+        "value": "Created By"
+    },
+    {
+        "category": "app",
+        "value": "Updated By"
+    },
+    {
+        "category": "app",
+        "value": "Post Categories"
+    },
+    {
+        "category": "app",
+        "value": "Post Category Form"
+    },
+    {
+        "category": "app",
+        "value": "Name"
+    },
+    {
+        "category": "app",
+        "value": "Image"
+    },
+    {
+        "category": "app",
+        "value": "Sub Text"
+    },
+    {
+        "category": "app",
+        "value": "Post Category Update Form"
+    },
+    {
+        "category": "app",
+        "value": "Post Tags"
+    },
+    {
+        "category": "app",
+        "value": "Save"
+    },
+    {
+        "category": "app",
+        "value": "Main Home Page Config"
+    },
+    {
+        "category": "app",
+        "value": "Landing Element"
+    },
+    {
+        "category": "app",
+        "value": "Home Page Title"
+    },
+    {
+        "category": "app",
+        "value": "Background"
+    },
+    {
+        "category": "app",
+        "value": "Description"
+    },
+    {
+        "category": "app",
+        "value": "Order"
+    },
+    {
+        "category": "app",
+        "value": "Icon"
+    },
+    {
+        "category": "app",
+        "value": "Url"
+    },
+    {
+        "category": "app",
+        "value": "Button"
+    },
+    {
+        "category": "app",
+        "value": "Button Title"
+    },
+    {
+        "category": "app",
+        "value": "Widget Config"
+    },
+    {
+        "category": "app",
+        "value": "Create Title settings"
+    },
+    {
+        "category": "app",
+        "value": "Team Section Config"
+    },
+    {
+        "category": "app",
+        "value": "Question Title Config"
+    },
+    {
+        "category": "app",
+        "value": "Product Config"
+    },
+    {
+        "category": "app",
+        "value": "Service Title Settings"
+    },
+    {
+        "category": "app",
+        "value": "Process Config"
+    },
+    {
+        "category": "app",
+        "value": "Statistic Section"
+    },
+    {
+        "category": "app",
+        "value": "Opinion Section"
+    },
+    {
+        "category": "app",
+        "value": "Logo"
+    },
+    {
+        "category": "app",
+        "value": "Add Product"
+    },
+    {
+        "category": "app",
+        "value": "Service Form"
+    },
+    {
+        "category": "app",
+        "value": "Service Update Form"
+    },
+    {
+        "category": "app",
+        "value": "Partner Form"
+    },
+    {
+        "category": "app",
+        "value": "Partner Update Form"
+    },
+    {
+        "category": "app",
+        "value": "Process Form"
+    },
+    {
+        "category": "app",
+        "value": "Process Update Form"
+    },
+    {
+        "category": "app",
+        "value": "Team members"
+    },
+    {
+        "category": "app",
+        "value": "Add Members"
+    },
+    {
+        "category": "app",
+        "value": " Delete"
+    },
+    {
+        "category": "app",
+        "value": "Add Opinion"
+    },
+    {
+        "category": "app",
+        "value": "Project Config"
+    },
+    {
+        "category": "app",
+        "value": "Design"
+    },
+    {
+        "category": "app",
+        "value": "Type"
+    },
+    {
+        "category": "app",
+        "value": "Structure"
+    },
+    {
+        "category": "app",
+        "value": "Statistic Form"
+    },
+    {
+        "category": "app",
+        "value": "Statistic Update Form"
+    },
+    {
+        "category": "app",
+        "value": "Questions"
+    },
+    {
+        "category": "app",
+        "value": "Question Form"
+    },
+    {
+        "category": "app",
+        "value": "Question Update Form"
+    },
+    {
+        "category": "app",
+        "value": "Contact Config"
+    },
+    {
+        "category": "app",
+        "value": "Work Order"
+    },
+    {
+        "category": "app",
+        "value": "Auth Item Form"
+    },
+    {
+        "category": "app",
+        "value": "Auth Item Update Form"
+    },
+    {
+        "category": "app",
+        "value": "Auth Item Child Form"
+    },
+    {
+        "category": "app",
+        "value": "Auth Item Child Update Form"
+    },
+    {
+        "category": "app",
+        "value": "Profile"
+    },
+    {
+        "category": "app",
+        "value": "User"
+    },
+    {
+        "category": "app",
+        "value": "Edit Profile"
+    },
+    {
+        "category": "app",
+        "value": "Info"
+    },
+    {
+        "category": "app",
+        "value": "Full Name"
+    },
+    {
+        "category": "app",
+        "value": "Mobile"
+    },
+    {
+        "category": "app",
+        "value": "Admin dashboard"
+    },
+    {
+        "category": "app",
+        "value": "Birthday"
+    },
+    {
+        "category": "app",
+        "value": "Update Profile Data"
+    },
+    {
+        "category": "app",
+        "value": "Firstname"
+    },
+    {
+        "category": "app",
+        "value": "Lastname"
+    },
+    {
+        "category": "app",
+        "value": "Avatar Path"
+    },
+    {
+        "category": "app",
+        "value": "Gender"
+    },
+    {
+        "category": "app",
+        "value": "Phone number"
+    },
+    {
+        "category": "app",
+        "value": "Old password"
+    },
+    {
+        "category": "app",
+        "value": "Enter current old password"
+    },
+    {
+        "category": "app",
+        "value": "Passwords do not match"
+    },
+    {
+        "category": "app",
+        "value": "Enter new password"
+    },
+    {
+        "category": "app",
+        "value": "Enter new confirm password"
+    },
+    {
+        "category": "app",
+        "value": "Change password"
+    },
+    {
+        "category": "app",
+        "value": "Saved"
+    },
+    {
+        "category": "app",
+        "value": "Telegram Bot Users"
+    },
+    {
+        "category": "app",
+        "value": "Create Telegram Bot User"
+    },
+    {
+        "category": "app",
+        "value": "Telegram Company ID"
+    },
+    {
+        "category": "app",
+        "value": "Telegram User ID"
+    },
+    {
+        "category": "app",
+        "value": "Phone Number"
+    },
+    {
+        "category": "app",
+        "value": "Balance"
+    },
+    {
+        "category": "app",
+        "value": "Is Admin"
+    },
+    {
+        "category": "app",
+        "value": "Is Block"
+    },
+    {
+        "category": "app",
+        "value": "Step"
+    },
+    {
+        "category": "app",
+        "value": "Options"
+    },
+    {
+        "category": "app",
+        "value": "Create User"
+    },
+    {
+        "category": "app",
+        "value": "Update User: {name}"
+    },
+    {
+        "category": "app",
+        "value": "Update"
+    },
+    {
+        "category": "app",
+        "value": "Delete"
+    },
+    {
+        "category": "app",
+        "value": "Are you sure you want to delete this item?"
+    },
+    {
+        "category": "app",
+        "value": "Create Page"
+    },
+    {
+        "category": "app",
+        "value": "Create Post"
+    },
+    {
+        "category": "app",
+        "value": "View Count"
+    },
+    {
+        "category": "app",
+        "value": "Publish At"
+    },
+    {
+        "category": "app",
+        "value": "Menus"
+    },
+    {
+        "category": "app",
+        "value": "Create Menu"
+    },
+    {
+        "category": "app",
+        "value": "Parent ID"
+    },
+    {
+        "category": "app",
+        "value": "Position Menu"
+    },
+    {
+        "category": "app",
+        "value": "Label Position"
+    },
+    {
+        "category": "app",
+        "value": "Item"
+    },
+    {
+        "category": "app",
+        "value": "Main menu information"
+    },
+    {
+        "category": "app",
+        "value": "Parent Id"
+    },
+    {
+        "category": "app",
+        "value": "--Select--"
+    },
+    {
+        "category": "app",
+        "value": "Other settings"
+    },
+    {
+        "category": "app",
+        "value": "Key"
+    },
+    {
+        "category": "app",
+        "value": "Value"
+    },
+    {
+        "category": "app",
+        "value": "Files"
+    },
+    {
+        "category": "app",
+        "value": "Opinion Config"
+    },
+    {
+        "category": "app",
+        "value": "Telegram Companies"
+    },
+    {
+        "category": "app",
+        "value": "Create Telegram Company"
+    },
+    {
+        "category": "app",
+        "value": "Bot Token"
+    },
+    {
+        "category": "app",
+        "value": "Admin Ids"
+    },
+    {
+        "category": "app",
+        "value": "Admin Url"
+    },
+    {
+        "category": "app",
+        "value": "Channel ID"
+    },
+    {
+        "category": "app",
+        "value": "Set Webhook"
+    },
+    {
+        "category": "app",
+        "value": "Are you sure you want to set web hook bot?"
+    },
+    {
+        "category": "app",
+        "value": "Update Telegram Company: {name}"
+    },
+    {
+        "category": "app",
+        "value": "Auth Items"
+    },
+    {
+        "category": "app",
+        "value": "Rule Name"
+    },
+    {
+        "category": "app",
+        "value": "Data"
+    },
+    {
+        "category": "app",
+        "value": "Auth Item Children"
+    },
+    {
+        "category": "app",
+        "value": "Parent"
+    },
+    {
+        "category": "app",
+        "value": "Child"
+    },
+    {
+        "category": "app",
+        "value": "I18n Source Messages"
+    },
+    {
+        "category": "app",
+        "value": "Create I18n Source Message"
+    },
+    {
+        "category": "app",
+        "value": "Category"
+    },
+    {
+        "category": "app",
+        "value": "Message"
+    },
+    {
+        "category": "app",
+        "value": "Main"
+    },
+    {
+        "category": "app",
+        "value": "About"
+    },
+    {
+        "category": "app",
+        "value": "Service form"
+    },
+    {
+        "category": "app",
+        "value": "Team form"
+    },
+    {
+        "category": "app",
+        "value": "Avatar"
+    },
+    {
+        "category": "app",
+        "value": "Level"
+    },
+    {
+        "category": "app",
+        "value": "Header Image"
+    },
+    {
+        "category": "app",
+        "value": "Process form"
+    },
+    {
+        "category": "app",
+        "value": "Update I18n Source Message: {name}"
+    },
+    {
+        "category": "app",
+        "value": "Username"
+    },
+    {
+        "category": "app",
+        "value": "Post View"
+    },
+    {
+        "category": "app",
+        "value": "Sub title"
+    },
+    {
+        "category": "app",
+        "value": "Create date"
+    },
+    {
+        "category": "app",
+        "value": "Update date"
+    },
+    {
+        "category": "app",
+        "value": "Publish date"
+    },
+    {
+        "category": "app",
+        "value": "Taglar"
+    },
+    {
+        "category": "app",
+        "value": "Post Update"
+    },
+    {
+        "category": "app",
+        "value": "Update Post: {name}"
+    },
+    {
+        "category": "app",
+        "value": "This username has already been taken."
+    },
+    {
+        "category": "app",
+        "value": "This email address has already been taken."
+    },
+    {
+        "category": "app",
+        "value": "Confirm Password"
+    },
+    {
+        "category": "app",
+        "value": "Update Page: {name}"
+    }
+]
