@@ -782,5 +782,17 @@
     {
         "category": "app",
         "value": "Update Page: {name}"
+    },
+    {
+        "category": "app",
+        "value": "Dashboard"
+    },
+    {
+        "category": "app",
+        "value": "Add"
+    },
+    {
+        "category": "app",
+        "value": "Create Post Tag"
     }
 ]

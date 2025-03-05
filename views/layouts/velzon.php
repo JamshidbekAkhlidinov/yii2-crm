@@ -51,7 +51,7 @@ $this->title = $header->title;
         <div class="container">
             <a class="navbar-brand" href="<?= Url::home() ?>">
                 <img src="<?= $header->files ?>" class="card-logo card-logo-dark" alt="logo dark" height="40">
-                <img src="/images/logo-light.png" class="card-logo card-logo-light" alt="logo light" height="17">
+                <img src="/images/new/logo-black.png" class="card-logo card-logo-light" alt="logo light" height="17">
             </a>
             <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

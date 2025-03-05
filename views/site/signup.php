@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="text-center mt-sm-5 mb-4 text-white-50">
                         <div>
                             <a href="<?= Url::to(['site/index']) ?>" class="d-inline-block auth-logo">
-                                <img src="/images/logo-light.png" alt="" height="20">
+                                <img src="/images/new/logo-black.png" alt="" height="20">
                             </a>
                         </div>
                         <p class="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
