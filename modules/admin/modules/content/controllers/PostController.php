@@ -78,7 +78,12 @@ class PostController extends Controller
         $form = new PostForm($model);
         if ($form->load($this->request->post()) && $form->save()) {
             return $this->redirect(['view', 'id' => $form->model->id]);
+        }elseif(!$form->save()){
+            dump($form->model->getErrors());
+            exit();
         }
+
+
 
         return $this->render($view, [
             'model' => $form,

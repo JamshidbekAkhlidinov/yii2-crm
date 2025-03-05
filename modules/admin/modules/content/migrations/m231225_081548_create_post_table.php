@@ -18,8 +18,8 @@ class m231225_081548_create_post_table extends Migration
     {
         $this->createTable('{{%post}}', [
             'id' => $this->primaryKey(),
-            'title' => $this->string(),
-            'image' => $this->string(),
+            'title' => $this->text(),
+            'image' => $this->string(500),
             'sub_text' => $this->text(),
             'description' => $this->text(),
             'status' => $this->integer(),

@@ -57,7 +57,7 @@ class Post extends \yii\db\ActiveRecord
         return [
             [['status', 'view_count', 'created_by', 'updated_by'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
-            [['title', 'image', 'sub_text', 'description'], 'string', 'max' => 255],
+            [['title', 'image', 'sub_text', 'description'], 'string'],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['created_by' => 'id']],
             [['updated_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['updated_by' => 'id']],
         ];

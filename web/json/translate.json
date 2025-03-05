@@ -125,7 +125,6 @@
             "uz": "Imtihon natijasi"
         }
     },
-    "Options": {
     "Create I18n Source Message": {
         "category": "app",
         "value": "Create I18n Source Message",
@@ -136,7 +135,6 @@
         }
     },
     "Update I18n Source Message: {name}": {
-    "Date of Birth": {
         "category": "app",
         "value": "Update I18n Source Message: {name}",
         "items": {
@@ -586,15 +584,6 @@
             "uz": "I18n manba xabarlari"
         }
     },
-    "Create I18n Source Message": {
-        "category": "app",
-        "value": "Create I18n Source Message",
-        "items": {
-            "en": "Create I18n Source Message",
-            "ru": "Создать исходное сообщение I18n",
-            "uz": "I18n manba xabarini yarating"
-        }
-    },
     "Category": {
         "category": "app",
         "value": "Category",
@@ -818,15 +807,6 @@
             "en": "Admin dashboard",
             "ru": "Панель администратора",
             "uz": "Administrator boshqaruv paneli"
-        }
-    },
-    "Update I18n Source Message: {name}": {
-        "category": "app",
-        "value": "Update I18n Source Message: {name}",
-        "items": {
-            "en": "Update I18n Source Message: {name}",
-            "ru": "Обновить исходное сообщение I18n: {name}",
-            "uz": "I18n manba xabarini yangilash: {name}"
         }
     },
     "Update": {
@@ -1546,6 +1526,7 @@
         "items": {
             "en": "Service Title Settings",
             "ru": "Настройки названия услуги",
+            "uz": "Xizmat sarlovhasini sozlash"
         }
     },
     "Process Config": {
@@ -1662,6 +1643,7 @@
         "items": {
             "en": "Add Members",
             "ru": "Добавить участников",
+            "uz": "Azo qo'shish"
         }
     },
     " Delete": {
@@ -1679,6 +1661,7 @@
         "items": {
             "en": "Add Opinion",
             "ru": "Добавить мнение",
+            "uz": "Variant qo'shish"
         }
     },
     "Project Config": {
@@ -1924,15 +1907,6 @@
             "uz": "Asosiy menyu ma'lumotlari"
         }
     },
-    "--Select--": {
-        "category": "app",
-        "value": "--Select--",
-        "items": {
-            "en": "--Select--",
-            "ru": "--Выбирать--",
-            "uz": "--Tanlash--"
-        }
-    },
     "Other settings": {
         "category": "app",
         "value": "Other settings",
@@ -2005,87 +1979,6 @@
             "uz": "Telegram kompaniyasini yangilang: {name}"
         }
     },
-    "Auth Items": {
-        "category": "app",
-        "value": "Auth Items",
-        "items": {
-            "en": "Auth Items",
-            "ru": "Элементы аутентификации",
-            "uz": "Auth ob'ektlari"
-        }
-    },
-    "Rule Name": {
-        "category": "app",
-        "value": "Rule Name",
-        "items": {
-            "en": "Rule Name",
-            "ru": "Имя правила",
-            "uz": "Qoida nomi"
-        }
-    },
-    "Data": {
-        "category": "app",
-        "value": "Data",
-        "items": {
-            "en": "Data",
-            "ru": "Данные",
-            "uz": "Ma'lumotlar"
-        }
-    },
-    "Auth Item Children": {
-        "category": "app",
-        "value": "Auth Item Children",
-        "items": {
-            "en": "Auth Item Children",
-            "ru": "Детский элемент аутентификации",
-            "uz": "Auth Item Bolalar"
-        }
-    },
-    "Parent": {
-        "category": "app",
-        "value": "Parent",
-        "items": {
-            "en": "Parent",
-            "ru": "Родитель",
-            "uz": "Ota-ona"
-        }
-    },
-    "Child": {
-        "category": "app",
-        "value": "Child",
-        "items": {
-            "en": "Child",
-            "ru": "Ребенок",
-            "uz": "Bola"
-        }
-    },
-    "I18n Source Messages": {
-        "category": "app",
-        "value": "I18n Source Messages",
-        "items": {
-            "en": "I18n Source Messages",
-            "ru": "Исходные сообщения I18n",
-            "uz": "I18n manba xabarlari"
-        }
-    },
-    "Category": {
-        "category": "app",
-        "value": "Category",
-        "items": {
-            "en": "Category",
-            "ru": "Категория",
-            "uz": "Turkum"
-        }
-    },
-    "Message": {
-        "category": "app",
-        "value": "Message",
-        "items": {
-            "en": "Message",
-            "ru": "Сообщение",
-            "uz": "Xabar"
-        }
-    },
     "Main": {
         "category": "app",
         "value": "Main",
@@ -2138,6 +2031,213 @@
             "en": "Header Image",
             "ru": "Заглавное изображение",
             "uz": "Sarlavha tasviri"
+        }
+    },
+    "Options": {
+        "category": "app",
+        "value": "Options",
+        "items": {
+            "en": "Options",
+            "ru": "Параметры",
+            "uz": "Variantlar"
+        }
+    },
+    "Post View": {
+        "category": "app",
+        "value": "Post View",
+        "items": {
+            "en": "Post View",
+            "ru": "Post View",
+            "uz": "Post Ko'rish"
+        }
+    },
+    "Sub title": {
+        "category": "app",
+        "value": "Sub title",
+        "items": {
+            "en": "Sub title",
+            "ru": "Подзаголовок",
+            "uz": "Kichik sarlavha"
+        }
+    },
+    "Create date": {
+        "category": "app",
+        "value": "Create date",
+        "items": {
+            "en": "Create date",
+            "ru": "Создать дату",
+            "uz": "Sana yaratish"
+        }
+    },
+    "Update date": {
+        "category": "app",
+        "value": "Update date",
+        "items": {
+            "en": "Update date",
+            "ru": "Обновление даты",
+            "uz": "Yangilanish sanasi"
+        }
+    },
+    "Publish date": {
+        "category": "app",
+        "value": "Publish date",
+        "items": {
+            "en": "Publish date",
+            "ru": "Дата публикации",
+            "uz": "Sana nashr"
+        }
+    },
+    "Taglar": {
+        "category": "app",
+        "value": "Taglar",
+        "items": {
+            "en": "Tags",
+            "ru": "Теги",
+            "uz": "Taglar"
+        }
+    },
+    "Post Update": {
+        "category": "app",
+        "value": "Post Update",
+        "items": {
+            "en": "Post Update",
+            "ru": "Опубликовать обновление",
+            "uz": "Postni yangilash"
+        }
+    },
+    "Update Post: {name}": {
+        "category": "app",
+        "value": "Update Post: {name}",
+        "items": {
+            "en": "Update Post: {name}",
+            "ru": "Обновление сообщения: {name}",
+            "uz": "Yangilash Xabar: {ism}"
+        }
+    },
+    "Update Page: {name}": {
+        "category": "app",
+        "value": "Update Page: {name}",
+        "items": {
+            "en": "Update Page: {name}",
+            "ru": "Страница обновления: {имя}",
+            "uz": "Yangilash sahifasi: {Ismi}"
+        }
+    },
+    "Dashboard": {
+        "category": "app",
+        "value": "Dashboard",
+        "items": {
+            "en": "Dashboard",
+            "ru": "Приборная панель",
+            "uz": "Dosh paneli"
+        }
+    },
+    "Add": {
+        "category": "app",
+        "value": "Add",
+        "items": {
+            "en": "Add",
+            "ru": "Добавлять",
+            "uz": "Qo'shmoq"
+        }
+    },
+    "Create Post Tag": {
+        "category": "app",
+        "value": "Create Post Tag",
+        "items": {
+            "en": "Create Post Tag",
+            "ru": "Создать тег post",
+            "uz": "Post yorlig'ini yarating"
+        }
+    },
+    "Auth": {
+        "category": "app",
+        "value": "Auth",
+        "items": {
+            "en": "Auth",
+            "ru": "Аут",
+            "uz": "Haqiqiy"
+        }
+    },
+    "Send Email": {
+        "category": "app",
+        "value": "Send Email",
+        "items": {
+            "en": "Send Email",
+            "ru": "Отправить электронное письмо",
+            "uz": "Elektron pochta xabarini yuboring"
+        }
+    },
+    "Password reset for {name}": {
+        "category": "app",
+        "value": "Password reset for {name}",
+        "items": {
+            "en": "Password reset for {name}",
+            "ru": "Сброс пароля для {name}",
+            "uz": "Parolni qayta tiklash {Ismi}"
+        }
+    },
+    "Check your email for further instructions.": {
+        "category": "app",
+        "value": "Check your email for further instructions.",
+        "items": {
+            "en": "Check your email for further instructions.",
+            "ru": "Проверьте свою электронную почту для получения дополнительных инструкций.",
+            "uz": "Qo'shimcha ko'rsatmalar uchun elektron pochtangizni tekshiring."
+        }
+    },
+    "Reset password": {
+        "category": "app",
+        "value": "Reset password",
+        "items": {
+            "en": "Reset password",
+            "ru": "Сбросить пароль",
+            "uz": "Parolni tiklash"
+        }
+    },
+    "New password was saved.": {
+        "category": "app",
+        "value": "New password was saved.",
+        "items": {
+            "en": "New password was saved.",
+            "ru": "Новый пароль был сохранен.",
+            "uz": "Yangi parol saqlandi."
+        }
+    },
+    "Your account has been successfully created. Check your email for further instructions.": {
+        "category": "app",
+        "value": "Your account has been successfully created. Check your email for further instructions.",
+        "items": {
+            "en": "Your account has been successfully created. Check your email for further instructions.",
+            "ru": "Ваша учетная запись была успешно создана. \nПроверьте свою электронную почту для получения дополнительных инструкций.",
+            "uz": "Sizning hisobingiz muvaffaqiyatli yaratildi. \nQo'shimcha ko'rsatmalar uchun elektron pochtangizni tekshiring."
+        }
+    },
+    "Activation email": {
+        "category": "app",
+        "value": "Activation email",
+        "items": {
+            "en": "Activation email",
+            "ru": "Электронная почта активации",
+            "uz": "Faollashtirish elektron pochta"
+        }
+    },
+    "Your activation link: {url}": {
+        "category": "app",
+        "value": "Your activation link: {url}",
+        "items": {
+            "en": "Your activation link: {url}",
+            "ru": "Ссылка на вашу активацию: {url}",
+            "uz": "Sizning faollashtirish havolasi: {URL}"
+        }
+    },
+    "Your account has been successfully activated.": {
+        "category": "app",
+        "value": "Your account has been successfully activated.",
+        "items": {
+            "en": "Your account has been successfully activated.",
+            "ru": "Ваша учетная запись была успешно активирована.",
+            "uz": "Sizning hisobingiz muvaffaqiyatli faollandi."
         }
     }
 }

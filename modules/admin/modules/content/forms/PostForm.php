@@ -5,7 +5,6 @@ namespace app\modules\admin\modules\content\forms;
 use app\modules\admin\modules\content\models\Post;
 use app\modules\admin\modules\content\models\PostCategoryLinker;
 use app\modules\admin\modules\content\models\PostTagLinker;
-use Yii;
 use yii\base\Model;
 
 class PostForm extends Model
@@ -28,8 +27,8 @@ class PostForm extends Model
         $this->image = $model->image;
         $this->sub_text = $model->sub_text;
         $this->description = $model->description;
-        $this->status = $model->status;
-        $this->publish_at = $model->publish_at;
+        $this->status = $model->isNewRecord ? true : $model->status;
+        $this->publish_at = $model->isNewRecord ? date('Y-m-d H:i:s') : $model->publish_at;
         $this->tags = $this->initTags();
         $this->categories = $this->initCategories();
         parent::__construct($config);

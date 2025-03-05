@@ -39,6 +39,8 @@ $this->registerCss($css);
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->errorSummary($model) ?>
+
     <div class="row">
         <div class="col-md-9">
             <div class="card">
