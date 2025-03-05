@@ -90,9 +90,9 @@ $this->title = $header->title;
 
                 <div class="">
                     <?php if (user()->isGuest): ?>
-                        <a href="<?= Url::to(['site/login']) ?>"
+                        <a href="<?= Url::to(['auth/login']) ?>"
                            class="btn btn-link fw-medium text-decoration-none text-body">Login</a>
-                        <a href="<?= Url::to(['site/signup']) ?>" class="btn btn-primary">Sign Up</a>
+                        <a href="<?= Url::to(['auth/signup']) ?>" class="btn btn-primary">Sign Up</a>
                     <?php else: ?>
 
                         <div class="btn-group" role="group">
@@ -112,7 +112,7 @@ $this->title = $header->title;
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="<?= Url::to(['site/logout']) ?>">
+                                    <a class="dropdown-item" href="<?= Url::to(['auth/logout']) ?>">
                                         Logout
                                     </a>
                                 </li>

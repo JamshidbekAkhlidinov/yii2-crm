@@ -168,20 +168,22 @@ class MenuWidget extends Widget
             if ($item['active'] ?? false) {
                 $active = 'active';
             }
-            $arrayItems[] = Html::tag(
-                'li',
-                Html::a(
-                    $item['label'] ?? '',
-                    $item['url'] ?? '',
+            if ($item['visible'] ?? true) {
+                $arrayItems[] = Html::tag(
+                    'li',
+                    Html::a(
+                        $item['label'] ?? '',
+                        $item['url'] ?? '',
+                        [
+                            'class' => 'nav-link ' . $active,
+                            'data-key' => 't-' . strtolower($item['label'] ?? ''),
+                        ]
+                    ),
                     [
-                        'class' => 'nav-link ' . $active,
-                        'data-key' => 't-' . strtolower($item['label'] ?? ''),
+                        'class' => 'nav-item',
                     ]
-                ),
-                [
-                    'class' => 'nav-item',
-                ]
-            );
+                );
+            }
         }
         return implode("\n", $arrayItems);
     }

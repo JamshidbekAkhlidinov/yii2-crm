@@ -1,16 +1,17 @@
 <?php
 
-/** @var yii\web\View $this */
-/** @var yii\bootstrap5\ActiveForm $form */
-
-/** @var app\forms\LoginForm $model */
-
 use yii\bootstrap5\ActiveForm;
 use yii\helpers\Url;
 
-$this->title = 'Login';
+/**
+ * @var $model \app\forms\SignupForm
+ */
+
+$this->title = 'Signup';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
+
 <div class="auth-page-wrapper pt-5">
     <!-- auth page bg -->
     <div class="auth-one-bg-position auth-one-bg" id="auth-particles">
@@ -47,8 +48,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
                         <div class="card-body p-4">
                             <div class="text-center mt-2">
-                                <h5 class="text-primary">Welcome Back !</h5>
-                                <p class="text-muted">Sign in to continue to Velzon.</p>
+                                <h5 class="text-primary">Create New Account</h5>
+                                <p class="text-muted">Get your free velzon account now</p>
                             </div>
                             <div class="p-2 mt-4">
 
@@ -62,40 +63,49 @@ $this->params['breadcrumbs'][] = $this->title;
                                     ],
                                 ]); ?>
 
-                                <?= $form->field($model, 'username')->textInput(['placeholder' => "Enter username"]) ?>
 
-                                <div class="float-end">
-                                    <a href="auth-pass-reset-basic.html" class="text-muted">Forgot password?</a>
-                                </div>
+                                <?= $form->field($model, 'email')->textInput(['placeholder' => "Enter email"]) ?>
+
+                                <?= $form->field($model, 'username')->textInput(['placeholder' => "Enter username"]) ?>
 
                                 <?= $form->field($model, 'password')->passwordInput(['placeholder' => "Enter password"]) ?>
 
-                                <?= $form->field($model, 'rememberMe')->checkbox([
-                                    'template' => "<div class=\"form-check\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-                                ]) ?>
+                                <?= $form->field($model, 'password_confirm')->passwordInput(['placeholder' => "Enter password confirm"]) ?>
 
-                                <div class="mt-4">
-                                    <button class="btn btn-success w-100" type="submit">Sign In</button>
+
+                                <div class="mb-4">
+                                    <p class="mb-0 fs-12 text-muted fst-italic">By registering you agree to the Velzon
+                                        <a href="#" class="text-primary text-decoration-underline fst-normal fw-medium">Terms
+                                            of Use</a></p>
                                 </div>
 
+                                <div id="password-contain" class="p-3 bg-light mb-2 rounded">
+                                    <h5 class="fs-13">Password must contain:</h5>
+                                    <p id="pass-length" class="invalid fs-12 mb-2">Minimum <b>8 characters</b></p>
+                                    <p id="pass-lower" class="invalid fs-12 mb-2">At <b>lowercase</b> letter (a-z)</p>
+                                    <p id="pass-upper" class="invalid fs-12 mb-2">At least <b>uppercase</b> letter (A-Z)
+                                    </p>
+                                    <p id="pass-number" class="invalid fs-12 mb-0">A least <b>number</b> (0-9)</p>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button class="btn btn-success w-100" type="submit">Sign Up</button>
+                                </div>
 
                                 <div class="mt-4 text-center">
                                     <div class="signin-other-title">
-                                        <h5 class="fs-13 mb-4 title">Sign In with</h5>
+                                        <h5 class="fs-13 mb-4 title text-muted">Create account with</h5>
                                     </div>
-                                    <div>
 
-                                        <?= yii\authclient\widgets\AuthChoice::widget([
-                                            'baseAuthUrl' => ['site/auth'],
-                                            'popupMode' => false,
-                                            'options' => [
-                                                'style' => 'display: flex;    justify-content: center;'
-                                            ]
-                                        ]) ?>
+                                    <?= yii\authclient\widgets\AuthChoice::widget([
+                                        'baseAuthUrl' => ['site/auth'],
+                                        'popupMode' => false,
+                                        'options' => [
+                                            'style' => 'display: flex;    justify-content: center;'
+                                        ]
+                                    ]) ?>
 
-                                    </div>
                                 </div>
-
                                 <?php ActiveForm::end() ?>
 
                             </div>
@@ -105,9 +115,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     <!-- end card -->
 
                     <div class="mt-4 text-center">
-                        <p class="mb-0">Don't have an account ? <a href="<?= Url::to(['site/signup']) ?>"
-                                                                   class="fw-semibold text-primary text-decoration-underline">
-                                Signup </a></p>
+                        <p class="mb-0">Already have an account ? <a href="<?= Url::to(['auth/login']) ?>"
+                                                                     class="fw-semibold text-primary text-decoration-underline">
+                                Signin </a></p>
                     </div>
 
                 </div>

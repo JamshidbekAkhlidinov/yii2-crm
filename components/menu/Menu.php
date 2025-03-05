@@ -8,7 +8,6 @@
 
 namespace app\components\menu;
 
-use app\modules\admin\enums\UserRolesEnum;
 use app\modules\admin\widgets\MenuWidget;
 
 class Menu
@@ -30,31 +29,37 @@ class Menu
                     'active' => controller()->route == 'site/index',
                 ],
                 [
-                    'label' => translate("Category"),
-                    'type' => MenuWidget::type_item, //menu,item
-                    'icon' => 'ri-dashboard-2-line',
-                    'id' => 'categoryList',
-                    'active' => controller()->route == 'category/index',
-                    'items' => [
-                        [
-                            'label' => 'Login',
-                            'url' => ['/admin/default/index'],
-                            'icon' => 'ri-dashboard-2-line',
-                            'active' => true,
-                        ],
-                        [
-                            'label' => 'child menu',
-                            'url' => ['/admin/default/index'],
-                            'icon' => 'ri-dashboard-2-line',
-                        ],
-                    ],
-                ],
-                [
                     'label' => translate("About"),
                     'type' => MenuWidget::type_item, //menu,item
                     'icon' => 'ri-checkbox-multiple-fill',
                     'url' => ['/site/about'],
                     'active' => controller()->route == 'site/about',
+                ],
+                [
+                    'label' => translate("Auth"),
+                    'type' => MenuWidget::type_item, //menu,item
+                    'icon' => 'ri-dashboard-2-line',
+                    'id' => 'categoryList',
+                    'items' => [
+                        [
+                            'label' => 'Login',
+                            'url' => ['/auth/login'],
+                            'icon' => 'ri-dashboard-2-line',
+                            'visible' => user()->isGuest
+                        ],
+                        [
+                            'label' => 'Signup',
+                            'url' => ['/auth/signup'],
+                            'icon' => 'ri-dashboard-2-line',
+                            'visible' => user()->isGuest
+                        ],
+                        [
+                            'label' => 'Profile',
+                            'url' => ['/admin'],
+                            'icon' => 'ri-dashboard-2-line',
+                            'visible' => !user()->isGuest
+                        ],
+                    ],
                 ],
             ]
         ]);

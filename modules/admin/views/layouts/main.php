@@ -568,7 +568,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             <?= Html::a(
                                 ' <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
                                 <span class="align-middle" data-key="t-logout">Logout</span>',
-                                ['/site/logout'],
+                                ['/auth/logout'],
                                 [
                                     'data' => [
                                         'method' => 'POST',

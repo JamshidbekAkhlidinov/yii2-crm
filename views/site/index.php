@@ -2,7 +2,14 @@
 
 use yii\helpers\Url;
 
+/**
+ * @var $this \yii\web\View
+ */
+
+$this->title = "Main Page";
+
 $facker = \Faker\Factory::create('en');
+
 ?>
 <div class="row">
     <div class="col-md-9">

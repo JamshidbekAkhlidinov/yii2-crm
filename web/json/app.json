@@ -794,5 +794,9 @@
     {
         "category": "app",
         "value": "Create Post Tag"
+    },
+    {
+        "category": "app",
+        "value": "Auth"
     }
 ]

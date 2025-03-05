@@ -22,7 +22,7 @@ class BaseController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['logout'],
+                //'only' => ['logout'],
                 'rules' => [
                     [
                         'actions' => ['logout'],
@@ -30,9 +30,13 @@ class BaseController extends Controller
                         'roles' => ['@'],
                     ],
                     [
-                        'actions' => ['login', 'signup'],
+                        'actions' => ['signup', 'login'],
+                        'allow' => false,
+                        'roles' => ['@'],
+                    ],
+                    [
                         'allow' => true,
-                        'roles' => ['?'],
+                        'roles' => ['@', '?'],
                     ],
                 ],
             ],
