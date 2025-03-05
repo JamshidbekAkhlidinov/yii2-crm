@@ -6,6 +6,8 @@ use app\forms\ContactForm;
 use app\forms\SocialNetworkLogin;
 use app\modules\admin\actions\SetLocaleAction;
 use app\modules\admin\enums\LanguageEnum;
+use app\modules\admin\modules\content\models\Post;
+use app\modules\admin\modules\content\models\PostCategory;
 use Yii;
 use yii\authclient\AuthAction;
 use yii\web\Response;
@@ -50,7 +52,17 @@ class SiteController extends BaseController
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $posts = Post::find()->orderBy(['id' => SORT_DESC])->limit(7)->all();
+        $categories = PostCategory::find()->orderBy(['id' => SORT_DESC])->limit(5)->all();
+        $favoritePosts = Post::find()
+            ->orderBy(['view_count' => SORT_DESC])
+            ->limit(5)
+            ->all();
+        return $this->render('index', [
+            'posts' => $posts,
+            'categories' => $categories,
+            'favoritePosts' => $favoritePosts
+        ]);
     }
 
     /**

@@ -14,12 +14,6 @@ use yii\helpers\Html;
 $this->title = translate("Post View");
 params()['breadcrumbs'][] = ['label' => translate("Posts"), 'url' => ['/admin/content/post']];
 params()['breadcrumbs'][] = $this->title;
-
-
-$this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => translate('Posts'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
-
 ?>
 <div class="container-fluid">
     <div class="post-view card ribbon-box border shadow-none">

@@ -842,5 +842,21 @@
     {
         "category": "app",
         "value": "Your account has been successfully activated."
+    },
+    {
+        "category": "app",
+        "value": "Read More"
+    },
+    {
+        "category": "app",
+        "value": "View all"
+    },
+    {
+        "category": "app",
+        "value": "Most popular posts"
+    },
+    {
+        "category": "app",
+        "value": "The requested page does not exist."
     }
 ]
