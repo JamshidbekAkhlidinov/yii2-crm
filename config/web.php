@@ -76,6 +76,16 @@ $config = [
             ],
         ],
 
+        'commandBus' => [
+            'class' => trntv\bus\CommandBus::class,
+            'middlewares' => [
+                [
+                    'class' => trntv\bus\middlewares\BackgroundCommandMiddleware::class,
+                    'backgroundHandlerPath' => '@yii',
+                    'backgroundHandlerRoute' => 'command-bus/handle',
+                ],
+            ],
+        ],
 
         'authManager' => [
             'class' => 'yii\rbac\DbManager',

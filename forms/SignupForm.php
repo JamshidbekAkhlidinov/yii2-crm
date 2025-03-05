@@ -8,9 +8,14 @@
 
 namespace app\forms;
 
+use app\commands\SendEmailCommand;
 use app\models\User;
+use app\modules\admin\models\UserToken;
+use cheatsheet\Time;
+use Yii;
 use yii\base\Exception;
 use yii\base\Model;
+use yii\helpers\Url;
 
 /**
  * Signup form
@@ -85,12 +90,26 @@ class SignupForm extends Model
             $user = new User();
             $user->username = $this->username;
             $user->email = $this->email;
-            $user->status = User::STATUS_ACTIVE;
+            $user->status = User::STATUS_NOT_ACTIVE;
             $user->setPassword($this->password);
             if (!$user->save()) {
                 throw new Exception("User couldn't be  saved");
             };
             $user->afterSignup();
+
+            $token = UserToken::create(
+                $user->id,
+                UserToken::TYPE_ACTIVATION,
+                Time::SECONDS_IN_A_DAY
+            );
+            Yii::$app->commandBus->handle(new SendEmailCommand([
+                'subject' => translate( 'Activation email'),
+                'view' => 'activation',
+                'to' => $this->email,
+                'params' => [
+                    'url' => Url::to(['/auth/activation', 'token' => $token->token], true)
+                ]
+            ]));
 
             return $user;
         }

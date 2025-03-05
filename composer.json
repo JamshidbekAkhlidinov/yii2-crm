@@ -29,7 +29,9 @@
     "yiisoft/yii2-swiftmailer": "~2.1",
     "yiisoft/yii2-authclient": "^2.2",
     "ustadev/telegram": "dev-main",
-    "ext-json": "*"
+    "ext-json": "*",
+    "trntv/cheatsheet": "^0.1.0",
+    "trntv/yii2-command-bus": "^3.2"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",

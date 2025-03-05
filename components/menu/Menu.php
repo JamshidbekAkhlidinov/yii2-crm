@@ -59,6 +59,12 @@ class Menu
                             'icon' => 'ri-dashboard-2-line',
                             'visible' => !user()->isGuest
                         ],
+                        [
+                            'label' => 'Logout',
+                            'url' => ['/auth/logout'],
+                            'icon' => 'ri-dashboard-2-line',
+                            'visible' => !user()->isGuest
+                        ],
                     ],
                 ],
             ]

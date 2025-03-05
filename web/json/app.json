@@ -798,5 +798,49 @@
     {
         "category": "app",
         "value": "Auth"
+    },
+    {
+        "category": "app",
+        "value": "Request password reset"
+    },
+    {
+        "category": "app",
+        "value": "Send Email"
+    },
+    {
+        "category": "app",
+        "value": "Password reset for {name}"
+    },
+    {
+        "category": "app",
+        "value": "Check your email for further instructions."
+    },
+    {
+        "category": "app",
+        "value": "Reset password"
+    },
+    {
+        "category": "app",
+        "value": "Change Password"
+    },
+    {
+        "category": "app",
+        "value": "New password was saved."
+    },
+    {
+        "category": "app",
+        "value": "Your account has been successfully created. Check your email for further instructions."
+    },
+    {
+        "category": "app",
+        "value": "Activation email"
+    },
+    {
+        "category": "app",
+        "value": "Your activation link: {url}"
+    },
+    {
+        "category": "app",
+        "value": "Your account has been successfully activated."
     }
 ]
