@@ -858,5 +858,9 @@
     {
         "category": "app",
         "value": "The requested page does not exist."
+    },
+    {
+        "category": "app",
+        "value": "Update Menu: {name}"
     }
 ]

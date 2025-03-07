@@ -2239,5 +2239,50 @@
             "ru": "Ваша учетная запись была успешно активирована.",
             "uz": "Sizning hisobingiz muvaffaqiyatli faollandi."
         }
+    },
+    "Read More": {
+        "category": "app",
+        "value": "Read More",
+        "items": {
+            "en": "Read More",
+            "ru": "Читать далее",
+            "uz": "Ko'proq o'qish"
+        }
+    },
+    "View all": {
+        "category": "app",
+        "value": "View all",
+        "items": {
+            "en": "View all",
+            "ru": "Просмотреть все",
+            "uz": "Hammasini ko'rish"
+        }
+    },
+    "Most popular posts": {
+        "category": "app",
+        "value": "Most popular posts",
+        "items": {
+            "en": "Most popular posts",
+            "ru": "Самые популярные посты",
+            "uz": "Eng mashhur postlar"
+        }
+    },
+    "The requested page does not exist.": {
+        "category": "app",
+        "value": "The requested page does not exist.",
+        "items": {
+            "en": "The requested page does not exist.",
+            "ru": "Запрашиваемой страницы не существует.",
+            "uz": "Talab qilingan sahifa mavjud emas."
+        }
+    },
+    "Update Menu: {name}": {
+        "category": "app",
+        "value": "Update Menu: {name}",
+        "items": {
+            "en": "Update Menu: {name}",
+            "ru": "Меню обновления: {имя}",
+            "uz": "Yangilash menyusi: {Ismi}"
+        }
     }
 }

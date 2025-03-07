@@ -10,9 +10,9 @@ use yii\web\NotFoundHttpException;
 
 class PostController extends Controller
 {
-    public function actionIndex()
+    public function actionIndex($category_id = null)
     {
-        $searchModel = new PostSearch();
+        $searchModel = new PostSearch(['category_id' => $category_id]);
         $dataProvider = $searchModel->search($this->request->queryParams);
         $categories = PostCategory::find()->orderBy(['id' => SORT_DESC])->limit(5)->all();
         $favoritePosts = Post::find()

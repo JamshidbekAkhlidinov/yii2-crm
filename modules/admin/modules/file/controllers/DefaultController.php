@@ -6,6 +6,8 @@ use alexantr\elfinder\CKEditorAction;
 use alexantr\elfinder\ConnectorAction;
 use alexantr\elfinder\InputFileAction;
 use alexantr\elfinder\TinyMCEAction;
+use app\modules\admin\enums\UserRolesEnum;
+use app\modules\admin\modules\rbac\enums\PermissionsEnum;
 use Yii;
 use yii\web\Controller;
 
@@ -29,14 +31,34 @@ class DefaultController extends Controller
                             'mimeDetect' => 'internal',
                             'imgLib' => 'gd',
                             'accessControl' => function ($attr, $path) {
-                                // hide files/folders which begins with dot
-                                return (strpos(basename($path), '.') === 0) ?
-                                    !($attr == 'read' || $attr == 'write') :
-                                    null;
+                                $user = Yii::$app->user;
+
+                                if (strpos(basename($path), '.') === 0) {
+                                    return !($attr == 'read' || $attr == 'write');
+                                }
+
+                                if ($user->can(UserRolesEnum::ROLE_ADMINISTRATOR)) {
+                                    return null;
+                                }
+
+                                if ($attr === 'read') {
+                                    return $user->can(PermissionsEnum::file_manager_view);
+                                }
+                                if ($attr === 'write' || $attr === 'upload') {
+                                    return $user->can(PermissionsEnum::file_manager_upload);
+                                }
+
+                                if ($attr === 'rm' && !$user->can(PermissionsEnum::file_manager_delete)) {
+                                    return false;
+                                }
+
+                                return false;
                             },
                             'uploadDeny' => [
                                 'text/x-php', 'text/php', 'application/x-php', 'application/php'
                             ],
+                            'disabled' => Yii::$app->user->can(PermissionsEnum::file_manager_delete) ? [] : ['rm'],
+
                         ],
                     ],
                 ],
