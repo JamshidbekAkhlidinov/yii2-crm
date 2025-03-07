@@ -19,6 +19,28 @@ class DefaultController extends Controller
 
     public function actions()
     {
+        $user = Yii::$app->user;
+        $userId = $user->id;
+        $baseUploadPath = Yii::getAlias('@webroot') . "/uploads";
+        $baseUploadUrl = Yii::getAlias('@web') . "/uploads";
+
+        if ($user->can(UserRolesEnum::ROLE_ADMINISTRATOR)) {
+            $userFolder = $baseUploadPath;
+            $userUrl = $baseUploadUrl;
+        } else {
+            $userFolder = "{$baseUploadPath}/users/{$userId}";
+            $userUrl = "{$baseUploadUrl}/users/{$userId}";
+
+            if (!is_dir($userFolder)) {
+                mkdir($userFolder, 0777, true);
+            }
+
+            $testFile = "{$userFolder}/test.txt";
+            if (!file_exists($testFile)) {
+                file_put_contents($testFile, $user->identity->username);
+            }
+        }
+
         return [
             'connector' => [
                 'class' => ConnectorAction::className(),
@@ -26,11 +48,11 @@ class DefaultController extends Controller
                     'roots' => [
                         [
                             'driver' => 'LocalFileSystem',
-                            'path' => Yii::getAlias('@webroot') . DIRECTORY_SEPARATOR . 'uploads',
-                            'URL' => Yii::getAlias('@web') . '/uploads/',
+                            'path' => $userFolder,
+                            'URL' => $userUrl,
                             'mimeDetect' => 'internal',
                             'imgLib' => 'gd',
-                            'accessControl' => function ($attr, $path) {
+                            'accessControl' => function ($attr, $path) use ($userFolder) {
                                 $user = Yii::$app->user;
 
                                 if (strpos(basename($path), '.') === 0) {
@@ -44,13 +66,16 @@ class DefaultController extends Controller
                                 if ($attr === 'read') {
                                     return $user->can(PermissionsEnum::file_manager_view);
                                 }
+
                                 if ($attr === 'write' || $attr === 'upload') {
                                     return $user->can(PermissionsEnum::file_manager_upload);
                                 }
 
-                                if ($attr === 'rm' && !$user->can(PermissionsEnum::file_manager_delete)) {
-                                    return false;
+                                if ($attr === 'rm') {
+                                    return $user->can(PermissionsEnum::file_manager_delete);
                                 }
+
+                                //return strpos(realpath($path), realpath($userFolder)) === 0;
 
                                 return false;
                             },
