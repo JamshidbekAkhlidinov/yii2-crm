@@ -13,13 +13,17 @@ interface StatusEnum
     public const ACTIVE = 1;
     public const INACTIVE = 0;
 
+    public const REQUEST = 2;
+
     public const ALL = [
         self::ACTIVE => "Active",
         self::INACTIVE => "Inactive",
+        self::REQUEST => "Request",
     ];
 
     public const COLORS = [
         self::ACTIVE => "bg-success",
         self::INACTIVE => "bg-warning",
+        self::REQUEST => "bg-info",
     ];
 }

@@ -25,16 +25,17 @@ class BaseController extends Controller
                 //'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout','new-post'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
                     [
                         'actions' => ['signup', 'login'],
-                        'allow' => false,
-                        'roles' => ['@'],
+                        'allow' => true,
+                        'roles' => ['?'],
                     ],
                     [
+                        'actions'=>['index','view','error','about'],
                         'allow' => true,
                         'roles' => ['@', '?'],
                     ],

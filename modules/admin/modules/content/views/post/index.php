@@ -5,14 +5,13 @@
  *   https://github.com/JamshidbekAkhlidinov
 */
 
+use app\modules\admin\enums\StatusEnum;
 use app\modules\admin\modules\content\models\DataToArray;
 use app\modules\admin\modules\content\models\Post;
-use app\modules\admin\modules\content\models\PostCategory;
-use yii\data\ActiveDataProvider;
-use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
+use yii\helpers\Html;
+use yii\helpers\Url;
 
 /** @var yii\web\View $this */
 /** @var app\modules\admin\modules\content\search\PostSearch $searchModel */
@@ -43,7 +42,7 @@ params()['breadcrumbs'][] = $this->title;
                     'format' => 'raw',
                     'attribute' => 'image',
                     'value' => static function ($model) {
-                        return Html::img($model->image, ['width' => '100px','height'=>'100px']);
+                        return Html::img($model->image, ['width' => '100px', 'height' => '100px']);
                     }
                 ],
                 'title',
@@ -56,7 +55,7 @@ params()['breadcrumbs'][] = $this->title;
                         }
                         return implode(', ', $items);
                     },
-                    'filter'=> DataToArray::getCategories(),
+                    'filter' => DataToArray::getCategories(),
                 ],
                 [
                     'attribute' => 'tag',
@@ -68,7 +67,23 @@ params()['breadcrumbs'][] = $this->title;
                         return implode(', ', $items);
                     }
                 ],
-                //'status',
+                [
+                    'format' => 'raw',
+                    'attribute' => 'status',
+                    'value' => static function ($model) {
+                        return Html::tag(
+                            'span',
+                            StatusEnum::ALL[$model->status] ?? "",
+                            [
+                                'class' => [
+                                    'badge',
+                                    StatusEnum::COLORS[$model->status] ?? "",
+                                ]
+                            ]
+                        );
+                    },
+                    'filter' => StatusEnum::ALL
+                ],
                 //'view_count',
                 //'created_by',
                 //'created_at',

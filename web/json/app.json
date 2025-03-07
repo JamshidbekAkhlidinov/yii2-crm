@@ -862,5 +862,13 @@
     {
         "category": "app",
         "value": "Update Menu: {name}"
+    },
+    {
+        "category": "app",
+        "value": "Add New Post"
+    },
+    {
+        "category": "app",
+        "value": "Create new post"
     }
 ]

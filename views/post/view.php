@@ -34,7 +34,7 @@ params()['breadcrumbs'][] = $this->title;
                                         <div class="text-muted">
                                             <div class="card ribbon-box border shadow-none">
                                                 <div class="card-body" style="padding-top: 35px">
-                                                    <p><?= str_replace("<img src=", "<img width='100%' height='' src=", $model->description); ?></p>
+                                                    <p><?= str_replace("<img src=", "<img width='100%' height='' src=", $model->description ?? ""); ?></p>
                                                 </div>
                                             </div>
 

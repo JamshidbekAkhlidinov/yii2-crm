@@ -4,7 +4,6 @@ namespace app\modules\admin;
 
 use app\modules\admin\enums\UserRolesEnum;
 use yii\filters\AccessControl;
-use yii\web\ErrorHandler;
 
 /**
  * admin module definition class
@@ -50,7 +49,7 @@ class Module extends \yii\base\Module
                         'allow' => true,
                         'roles' => [
                             UserRolesEnum::ROLE_ADMINISTRATOR,
-                            UserRolesEnum::ROLE_MANAGER
+                            UserRolesEnum::ROLE_MANAGER,
                         ],
                     ],
                 ],

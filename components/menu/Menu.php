@@ -36,6 +36,13 @@ class Menu
                     'active' => controller()->route == 'site/about',
                 ],
                 [
+                    'label' => translate("Add New Post"),
+                    'type' => MenuWidget::type_item, //menu,item
+                    'icon' => 'ri-checkbox-multiple-fill',
+                    'url' => ['/site/new-post'],
+                    'active' => controller()->route == 'site/new-post',
+                ],
+                [
                     'label' => translate("Auth"),
                     'type' => MenuWidget::type_item, //menu,item
                     'icon' => 'ri-dashboard-2-line',

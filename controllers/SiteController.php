@@ -3,9 +3,11 @@
 namespace app\controllers;
 
 use app\forms\ContactForm;
+use app\forms\PostForm;
 use app\forms\SocialNetworkLogin;
 use app\modules\admin\actions\SetLocaleAction;
 use app\modules\admin\enums\LanguageEnum;
+use app\modules\admin\enums\StatusEnum;
 use app\modules\admin\modules\content\models\Post;
 use app\modules\admin\modules\content\models\PostCategory;
 use Yii;
@@ -52,10 +54,11 @@ class SiteController extends BaseController
      */
     public function actionIndex()
     {
-        $posts = Post::find()->orderBy(['id' => SORT_DESC])->limit(7)->all();
+        $posts = Post::find()->orderBy(['id' => SORT_DESC])->active()->limit(7)->all();
         $categories = PostCategory::find()->orderBy(['id' => SORT_DESC])->limit(5)->all();
         $favoritePosts = Post::find()
             ->orderBy(['view_count' => SORT_DESC])
+            ->active()
             ->limit(5)
             ->all();
         return $this->render('index', [
@@ -99,4 +102,20 @@ class SiteController extends BaseController
         return $this->render('turn');
     }
 
+    public function actionNewPost()
+    {
+        $form = new PostForm(new Post(['status' => StatusEnum::REQUEST]));
+        if ($form->load(Yii::$app->request->post()) && $form->save()) {
+            session()->setFlash('alert', [
+                'body' => translate("Saved"),
+                'options' => [
+                    'class' => 'alert alert-success'
+                ]
+            ]);
+            return $this->redirect(['site/index']);
+        }
+        return $this->render('new-post', [
+            'post' => $form,
+        ]);
+    }
 }

@@ -2,9 +2,7 @@
 
 namespace app\modules\admin\modules\content\models\query;
 
-use app\modules\admin\enums\LandingElementEnum;
 use app\modules\admin\enums\StatusEnum;
-use app\modules\admin\modules\landingElement\models\LandingElement;
 
 /**
  * This is the ActiveQuery class for [[\app\modules\admin\modules\content\models\Post]].
@@ -15,7 +13,7 @@ class PostQuery extends \yii\db\ActiveQuery
 {
     public function active()
     {
-        return $this->andWhere(StatusEnum::ACTIVE);
+        return $this->andWhere(['status' => StatusEnum::ACTIVE]);
     }
 
     /**

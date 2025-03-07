@@ -7,9 +7,9 @@
 
 namespace app\modules\admin\modules\content\search;
 
+use app\modules\admin\modules\content\models\Page;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\modules\admin\modules\content\models\Page;
 
 /**
  * PageSearch represents the model behind the search form of `app\modules\admin\modules\content\models\Page`.
@@ -45,7 +45,7 @@ class PageSearch extends Page
      */
     public function search($params)
     {
-        $query = Page::find();
+        $query = Page::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 
