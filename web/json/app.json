@@ -870,5 +870,13 @@
     {
         "category": "app",
         "value": "Create new post"
+    },
+    {
+        "category": "app",
+        "value": "User data"
+    },
+    {
+        "category": "app",
+        "value": "Post count"
     }
 ]

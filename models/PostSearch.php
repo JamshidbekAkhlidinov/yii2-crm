@@ -22,6 +22,8 @@ class PostSearch extends Post
     public $tag;
     public $category_id;
 
+    public $active = true;
+
     /**
      * {@inheritdoc}
      */
@@ -29,7 +31,7 @@ class PostSearch extends Post
     {
         return [
             [['id', 'status', 'view_count', 'created_by', 'updated_by'], 'integer'],
-            [['title', 'image', 'sub_text', 'description', 'created_at', 'updated_at'], 'safe'],
+            [['title', 'sub_text', 'description', 'created_at', 'updated_at'], 'safe'],
             [['tag', 'category_id'], 'safe'],
         ];
     }
@@ -52,7 +54,10 @@ class PostSearch extends Post
      */
     public function search($params)
     {
-        $query = Post::find()->orderBy(['id' => SORT_DESC])->active();
+        $query = Post::find()->orderBy(['id' => SORT_DESC]);
+        if ($this->active) {
+            $query->active();
+        }
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
@@ -80,7 +85,6 @@ class PostSearch extends Post
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'image', $this->image])
             ->andFilterWhere(['like', 'sub_text', $this->sub_text])
             ->andFilterWhere(['like', 'description', $this->description]);
 

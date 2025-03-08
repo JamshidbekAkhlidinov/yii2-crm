@@ -8,6 +8,7 @@
 
 namespace app\components\menu;
 
+use app\modules\admin\enums\UserRolesEnum;
 use app\modules\admin\widgets\MenuWidget;
 
 class Menu
@@ -62,7 +63,7 @@ class Menu
                         ],
                         [
                             'label' => 'Profile',
-                            'url' => ['/admin'],
+                            'url' => can(UserRolesEnum::ROLE_USER) ? ['/user/profile'] : ['/admin'],
                             'icon' => 'ri-dashboard-2-line',
                             'visible' => !user()->isGuest
                         ],

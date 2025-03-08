@@ -21,24 +21,30 @@ class PostController extends Controller
     public function actions()
     {
         $user = Yii::$app->user;
-        $userId = $user->id;
         $baseUploadPath = Yii::getAlias('@webroot') . "/uploads";
         $baseUploadUrl = Yii::getAlias('@web') . "/uploads";
 
-        if ($user->can(UserRolesEnum::ROLE_ADMINISTRATOR)) {
-            $userFolder = $baseUploadPath;
-            $userUrl = $baseUploadUrl;
-        } else {
-            $userFolder = "{$baseUploadPath}/users/{$userId}";
-            $userUrl = "{$baseUploadUrl}/users/{$userId}";
+        $userFolder = $baseUploadPath;
+        $userUrl = $baseUploadUrl;
 
-            if (!is_dir($userFolder)) {
-                mkdir($userFolder, 0777, true);
-            }
+        if ($user->identity) {
+            $userId = $user->id;
 
-            $testFile = "{$userFolder}/test.txt";
-            if (!file_exists($testFile)) {
-                file_put_contents($testFile, $user->identity->username);
+            if ($user->can(UserRolesEnum::ROLE_ADMINISTRATOR)) {
+                $userFolder = $baseUploadPath;
+                $userUrl = $baseUploadUrl;
+            } else {
+                $userFolder = "{$baseUploadPath}/users/{$userId}";
+                $userUrl = "{$baseUploadUrl}/users/{$userId}";
+
+                if (!is_dir($userFolder)) {
+                    mkdir($userFolder, 0777, true);
+                }
+
+                $testFile = "{$userFolder}/test.txt";
+                if (!file_exists($testFile)) {
+                    file_put_contents($testFile, $user->identity->username);
+                }
             }
         }
 
@@ -56,28 +62,29 @@ class PostController extends Controller
                             'accessControl' => function ($attr, $path) use ($userFolder) {
                                 $user = Yii::$app->user;
 
-                                if (strpos(basename($path), '.') === 0) {
-                                    return !($attr == 'read' || $attr == 'write');
+                                if ($user) {
+                                    if (strpos(basename($path), '.') === 0) {
+                                        return !($attr == 'read' || $attr == 'write');
+                                    }
+
+                                    if ($user->can(UserRolesEnum::ROLE_ADMINISTRATOR)) {
+                                        return null;
+                                    }
+
+                                    if ($attr === 'read') {
+                                        return $user->can(PermissionsEnum::file_manager_view);
+                                    }
+
+                                    if ($attr === 'write' || $attr === 'upload') {
+                                        return $user->can(PermissionsEnum::file_manager_upload);
+                                    }
+
+                                    if ($attr === 'rm') {
+                                        return $user->can(PermissionsEnum::file_manager_delete);
+                                    }
+
+                                    //return strpos(realpath($path), realpath($userFolder)) === 0;
                                 }
-
-                                if ($user->can(UserRolesEnum::ROLE_ADMINISTRATOR)) {
-                                    return null;
-                                }
-
-                                if ($attr === 'read') {
-                                    return $user->can(PermissionsEnum::file_manager_view);
-                                }
-
-                                if ($attr === 'write' || $attr === 'upload') {
-                                    return $user->can(PermissionsEnum::file_manager_upload);
-                                }
-
-                                if ($attr === 'rm') {
-                                    return $user->can(PermissionsEnum::file_manager_delete);
-                                }
-
-                                //return strpos(realpath($path), realpath($userFolder)) === 0;
-
                                 return false;
                             },
                             'uploadDeny' => [
@@ -130,8 +137,10 @@ class PostController extends Controller
             ->limit(5)
             ->all();
         $model = $this->findModel($id);
-        $model->view_count++;
-        $model->save();
+        if ($model->created_by !== user()->id) {
+            $model->view_count++;
+            $model->save();
+        }
         $favoritePosts = Post::find()
             ->orderBy(['view_count' => SORT_DESC])
             ->active()

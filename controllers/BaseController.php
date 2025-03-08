@@ -22,10 +22,10 @@ class BaseController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                //'only' => ['logout'],
+                'only' => ['logout', 'new-post', 'profile', 'signup', 'login', 'index', 'view', 'error', 'about'],
                 'rules' => [
                     [
-                        'actions' => ['logout','new-post'],
+                        'actions' => ['logout', 'new-post', 'profile'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -35,7 +35,7 @@ class BaseController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions'=>['index','view','error','about'],
+                        'actions' => ['index', 'view', 'error', 'about'],
                         'allow' => true,
                         'roles' => ['@', '?'],
                     ],
