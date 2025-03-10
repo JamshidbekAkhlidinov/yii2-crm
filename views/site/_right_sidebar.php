@@ -14,8 +14,13 @@
 use app\models\Advertise;
 use yii\helpers\Url;
 
-$advertisement = Advertise::findOne(['status' => Advertise::status_active, 'align' => Advertise::align_sidebar]);
-?>
+$advertisement = Advertise::find()
+    ->where([
+        'status' => Advertise::status_active,
+        'align' => Advertise::align_sidebar
+    ])
+    ->orderBy(['id' => SORT_DESC])
+    ->one();?>
 
 <div class="col-md-3">
 

@@ -30,7 +30,13 @@ $this->registerMetaTag(['name' => 'description', 'content' => $this->params['met
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
 
-$advertisement = Advertise::findOne(['status' => Advertise::status_active, 'align' => Advertise::align_top]);
+$advertisement = Advertise::find()
+    ->where([
+        'status' => Advertise::status_active,
+        'align' => Advertise::align_top
+    ])
+    ->orderBy(['id' => SORT_DESC])
+    ->one();
 ?>
 
 

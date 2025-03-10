@@ -7,9 +7,9 @@
 
 namespace app\modules\admin\modules\content\search;
 
+use app\models\Advertise;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Advertise;
 
 /**
  * AdvertiseSearch represents the model behind the search form of `app\models\Advertise`.
@@ -46,7 +46,7 @@ class AdvertiseSearch extends Advertise
      */
     public function search($params)
     {
-        $query = Advertise::find();
+        $query = Advertise::find()->orderBy(['id' => SORT_DESC]);
 
         // add conditions that should always apply here
 
