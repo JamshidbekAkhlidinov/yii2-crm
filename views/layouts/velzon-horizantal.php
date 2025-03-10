@@ -11,14 +11,15 @@
  * @var $this yii\web\View
  */
 
-use app\modules\admin\assets\AdminAsset;
 use app\components\menu\Menu;
+use app\models\Advertise;
+use app\modules\admin\assets\AdminAsset;
+use app\modules\admin\widgets\LanguageSwitcherWidget;
 use yii\bootstrap5\Alert;
 use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
-use app\modules\admin\widgets\LanguageSwitcherWidget;
 
 AdminAsset::register($this);
 
@@ -28,6 +29,8 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
+
+$advertisement = Advertise::findOne(['status' => Advertise::status_active, 'align' => Advertise::align_top]);
 ?>
 
 
@@ -97,10 +100,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     </span>
                     </button>
                     <!-- App Search-->
-                    <form class="app-search d-none d-md-block" action="<?=Url::to(['post/index'])?>">
+                    <form class="app-search d-none d-md-block" action="<?= Url::to(['post/index']) ?>">
                         <div class="position-relative">
-                            <input type="text" class="form-control" placeholder="Search..." name="search"  autocomplete="off"
-                                   id="search-options" value="<?=get('search')?>">
+                            <input type="text" class="form-control" placeholder="Search..." name="search"
+                                   autocomplete="off"
+                                   id="search-options" value="<?= get('search') ?>">
                             <span class="mdi mdi-magnify search-widget-icon"></span>
                             <span class="mdi mdi-close-circle search-widget-icon search-widget-icon-close d-none"
                                   id="search-close-options"></span>
@@ -118,7 +122,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         </button>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
                              aria-labelledby="page-header-search-dropdown">
-                            <form class="p-3" action="<?=Url::to(['post/index'])?>">
+                            <form class="p-3" action="<?= Url::to(['post/index']) ?>">
                                 <div class="form-group m-0">
                                     <div class="input-group">
                                         <input type="text" class="form-control" name="search" placeholder="Search ..."
@@ -189,7 +193,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <!-- Left Sidebar End -->
     <!-- Vertical Overlay-->
     <div class="vertical-overlay"></div>
-
+    <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+        <div class="dropdown-menu dropdown-menu-lg" id="search-dropdown">
+        </div>
+    </div>
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
@@ -232,6 +239,13 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                             'options'
                         ),
                     ]) ?>
+                <?php endif; ?>
+
+                <?php if ($advertisement): ?>
+                    <a href="<?= $advertisement->url ?>">
+                        <img src="<?= $advertisement->image ?>" title="<?= $advertisement->description ?>" width="100%"
+                             class="pb-4">
+                    </a>
                 <?php endif; ?>
                 <?= $content ?>
                 <!-- end page title -->

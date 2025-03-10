@@ -11,8 +11,10 @@
  * @var $favoritePosts
  */
 
+use app\models\Advertise;
 use yii\helpers\Url;
 
+$advertisement = Advertise::findOne(['status' => Advertise::status_active, 'align' => Advertise::align_sidebar]);
 ?>
 
 <div class="col-md-3">
@@ -50,7 +52,8 @@ use yii\helpers\Url;
                 ?>
                 <div class="d-flex <?= ($i != 1) ? " mt-4" : "" ?>">
                     <div class="flex-shrink-0">
-                        <img src="<?=$post->image?>" class="rounded img-fluid" style="height: 60px; width: 100px" alt="">
+                        <img src="<?= $post->image ?>" class="rounded img-fluid" style="height: 60px; width: 100px"
+                             alt="">
                     </div>
                     <div class="flex-grow-1 ms-3">
                         <h6 class="mb-1 lh-base">
@@ -69,16 +72,24 @@ use yii\helpers\Url;
         </div><!-- end card body -->
     </div>
 
-<!--    <div class="card card-body">-->
-<!--        <div>-->
-<!--            --><?php //for ($i = 1; $i <= 4; $i++):
-//                $text = "test";
-//                ?>
-<!--                <a href="--><?php //= Url::to(['post/view', 'id' => $i]) ?><!--" class="badge bg-success">-->
-<!--                    --><?php //= $text ?>
-<!--                </a>-->
-<!--            --><?php //endfor; ?>
-<!--        </div>-->
-<!--    </div>-->
+
+    <?php if ($advertisement): ?>
+        <a href="<?= $advertisement->url ?>">
+            <img src="<?= $advertisement->image ?>" title="<?= $advertisement->description ?>" width="100%"
+                 class="pb-4">
+        </a>
+    <?php endif; ?>
+
+    <!--    <div class="card card-body">-->
+    <!--        <div>-->
+    <!--            --><?php //for ($i = 1; $i <= 4; $i++):
+    //                $text = "test";
+    //                ?>
+    <!--                <a href="--><?php //= Url::to(['post/view', 'id' => $i]) ?><!--" class="badge bg-success">-->
+    <!--                    --><?php //= $text ?>
+    <!--                </a>-->
+    <!--            --><?php //endfor; ?>
+    <!--        </div>-->
+    <!--    </div>-->
 
 </div>

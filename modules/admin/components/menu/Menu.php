@@ -57,6 +57,13 @@ class Menu
                             'active' => controller()->id == "post",
 
                         ],
+                        [
+                            'label' => translate("Advertises"),
+                            'url' => ['/admin/content/advertise'],
+                            'icon' => 'ri-dashboard-2-line',
+                            'active' => controller()->id == "advertise",
+
+                        ],
                     ],
                 ],
                 //LandingElementMenu::getMenu(),

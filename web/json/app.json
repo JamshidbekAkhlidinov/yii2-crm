@@ -878,5 +878,29 @@
     {
         "category": "app",
         "value": "Post count"
+    },
+    {
+        "category": "app",
+        "value": "Login"
+    },
+    {
+        "category": "app",
+        "value": "Signup"
+    },
+    {
+        "category": "app",
+        "value": "Logout"
+    },
+    {
+        "category": "app",
+        "value": "New Post"
+    },
+    {
+        "category": "app",
+        "value": "Advertise"
+    },
+    {
+        "category": "app",
+        "value": "Advertises"
     }
 ]

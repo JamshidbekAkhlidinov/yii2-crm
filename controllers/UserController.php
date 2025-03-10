@@ -21,4 +21,9 @@ class UserController extends BaseController
             'dataProvider' => $dataProvider,
         ]);
     }
+
+    public function actionAdvertise()
+    {
+        return $this->render('advertise');
+    }
 }
